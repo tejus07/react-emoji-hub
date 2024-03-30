@@ -42,7 +42,7 @@ export default function App() {
           right: "10px"
         }}
       >
-        Project by Deepanshu
+        Project by Tejus
       </span>
       <h1 className="header">Emoticons 😎</h1>
       <div className="search-container">
