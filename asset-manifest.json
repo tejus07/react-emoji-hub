@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.87e1e860.css",
-    "main.js": "/static/js/main.1d8711a9.js",
-    "index.html": "/index.html",
-    "main.87e1e860.css.map": "/static/css/main.87e1e860.css.map",
-    "main.1d8711a9.js.map": "/static/js/main.1d8711a9.js.map"
+    "main.css": "/react-emoji-hub/static/css/main.87e1e860.css",
+    "main.js": "/react-emoji-hub/static/js/main.1d8711a9.js",
+    "index.html": "/react-emoji-hub/index.html",
+    "main.87e1e860.css.map": "/react-emoji-hub/static/css/main.87e1e860.css.map",
+    "main.1d8711a9.js.map": "/react-emoji-hub/static/js/main.1d8711a9.js.map"
   },
   "entrypoints": [
     "static/css/main.87e1e860.css",
