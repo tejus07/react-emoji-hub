@@ -6,13 +6,17 @@ import SearchResult from "./SearchResult";
 export default function App() {
   const [allRecords, setAllRecords] = useState([]);
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
+
     fetch("https://emojihub.yurace.pro/api/all")
       .then((res) => res.json())
       .then((json) => {
         setData(json);
         setAllRecords(json);
+        setLoading(false);
       });
   }, []);
 
@@ -44,7 +48,7 @@ export default function App() {
       >
         Project by Tejus
       </span>
-      <h1 className="header">Emoticons 😎</h1>
+      <h1 className="header">🌟💻💡Emoticons</h1>
       <div className="search-container">
         <SearchResult searchQuery={(query) => filterData(query)} />
       </div>
@@ -55,7 +59,9 @@ export default function App() {
           ))}
         </div>
       </div>
-      {data.length === 0 ? (
+      {data.length === 0 ? loading ? (
+        <div style={{ color: "#ccc" }}>Loading...</div>
+      ) : (
         <div style={{ color: "#ccc" }}>No result found!</div>
       ) : (
         ""
