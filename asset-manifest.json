@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-emoji-hub/static/css/main.4541a6ca.css",
-    "main.js": "/react-emoji-hub/static/js/main.3c33e183.js",
+    "main.js": "/react-emoji-hub/static/js/main.600d8eda.js",
     "index.html": "/react-emoji-hub/index.html",
     "main.4541a6ca.css.map": "/react-emoji-hub/static/css/main.4541a6ca.css.map",
-    "main.3c33e183.js.map": "/react-emoji-hub/static/js/main.3c33e183.js.map"
+    "main.600d8eda.js.map": "/react-emoji-hub/static/js/main.600d8eda.js.map"
   },
   "entrypoints": [
     "static/css/main.4541a6ca.css",
-    "static/js/main.3c33e183.js"
+    "static/js/main.600d8eda.js"
   ]
 }
