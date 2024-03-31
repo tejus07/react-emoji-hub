@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import EmojiCard from "./EmojiCard";
 import SearchResult from "./SearchResult";
 
@@ -24,17 +24,21 @@ export default function App() {
     if (string) return string.trim().toLowerCase();
     return "";
   };
-  const filterData = (query) => {
-    if (!query) {
-      setData(allRecords);
-      return;
-    }
 
-    const filteredData = allRecords.filter((x) => {
-      if (massageString(x.name).includes(massageString(query))) return true;
-    });
-    setData(filteredData);
-  };
+  const filterData = useCallback(
+    (query) => {
+      if (!query) {
+        setData(allRecords);
+        return;
+      }
+
+      const filteredData = allRecords.filter((x) => {
+        if (massageString(x.name).includes(massageString(query))) return true;
+      });
+      setData(filteredData);
+    },
+    [allRecords]
+  );
 
   return (
     <div className="App">
@@ -59,12 +63,9 @@ export default function App() {
           ))}
         </div>
       </div>
-      {data.length === 0 ? loading ? (
-        <div style={{ color: "#ccc" }}>Loading...</div>
-      ) : (
+      {loading && <div style={{ color: "#ccc" }}>Loading...</div>}
+      {!loading && data.length === 0 && (
         <div style={{ color: "#ccc" }}>No result found!</div>
-      ) : (
-        ""
       )}
     </div>
   );
